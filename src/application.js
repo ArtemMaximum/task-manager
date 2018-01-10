@@ -11,18 +11,17 @@ import { theme, globalStyles } from './theme'
 const render = () => {
   // eslint-disable-next-line no-unused-expressions
   globalStyles()
-  
   const renderFunction = process.env.NODE_ENV === 'development'
     ? ReactDOM.render
     : ReactDOM.hydrate
-  
+
   renderFunction(
     (
       <AppContainer>
         <ThemeProvider theme={theme}>
           <div>
             <BrowserRouter>
-              <Routes/>
+              <Routes />
             </BrowserRouter>
           </div>
         </ThemeProvider>

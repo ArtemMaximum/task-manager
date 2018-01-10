@@ -6,7 +6,7 @@ import scheme from 'scheme'
 
 
 const navigationItems = [
-  { to: '/', title: 'Tasks List' },
+  { to: '/', title: 'Home' },
   // { to: '/conference', title: 'Conference' },
   // { to: '/signup', title: 'SignUp' },
   // { to: '/signin', title: 'Login' }

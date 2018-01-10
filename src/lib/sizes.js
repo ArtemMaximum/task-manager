@@ -24,7 +24,7 @@ export const mediaCss = Object.keys(width).reduce((acc, label) => {
       ${css(...args)}
     }
   `
-  
+
   return acc
 }, {})
 
@@ -35,7 +35,6 @@ export const mediaCss = Object.keys(width).reduce((acc, label) => {
 export const mediaMaxWidth = (type, cb = b => b) =>
   `@media (max-width: ${cb(width[type] || type)}px)`
 
-
 /**
  * @param {string|number} type tablet | desktop
  * @param cb
@@ -43,7 +42,6 @@ export const mediaMaxWidth = (type, cb = b => b) =>
  */
 export const mediaMinWidth = (type, cb = b => b) =>
   `@media (min-width: ${cb(width[type] || type)}px)`
-
 
 /**
  *
@@ -53,14 +51,12 @@ export const mediaMinWidth = (type, cb = b => b) =>
 export const mediaWidthBetween = (from, to) =>
   `@media (min-width: ${width[from] || from}px and max-width: ${width[to] || to}px`
 
-
 /**
  * @param {string|number} type
  * @return {string} css @media (max-height: ${HT}px)
  */
 export const mediaMaxHeight = (type, cb = b => b) =>
   `@media (max-height: ${cb(height[type] || type)}px)`
-
 
 /**
  *

@@ -1,4 +1,3 @@
-
 const KEY_OFFSET = 1000
 
 export const keyify = line => line.split('')

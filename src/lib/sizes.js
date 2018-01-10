@@ -24,7 +24,7 @@ export const mediaCss = Object.keys(width).reduce((acc, label) => {
       ${css(...args)}
     }
   `
-
+  
   return acc
 }, {})
 

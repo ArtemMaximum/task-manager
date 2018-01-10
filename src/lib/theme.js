@@ -11,4 +11,4 @@ export const themeOr = (propOrPath, fallback = '') =>
   pathOr(fallback, ['theme'].concat(propOrPath))
 
 export const ifProp = (propOrPath, fallback = '') =>
-    true
+  true

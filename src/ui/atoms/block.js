@@ -7,10 +7,10 @@ export const Block = styled.div`
 `
 
 Block.propTypes = {
-    palette: PropTypes.string,
-    reverse: PropTypes.bool
+  palette: PropTypes.string,
+  reverse: PropTypes.bool
 }
 
 Block.defaultProps = {
-    palette: 'grayscale'
+  palette: 'grayscale'
 }

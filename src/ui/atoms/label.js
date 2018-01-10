@@ -9,5 +9,5 @@ export const Label = styled.label`
 `
 
 Label.propTypes = {
-    reverse: PropTypes.bool
+  reverse: PropTypes.bool
 }

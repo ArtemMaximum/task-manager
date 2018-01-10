@@ -14,8 +14,7 @@ module.exports = webpackMerge(prodConf, {
     filename: 'js/[name].js',
   },
   module: {
-    rules: [
-    ],
+    rules: [],
   },
   node: {
     __dirname: false,

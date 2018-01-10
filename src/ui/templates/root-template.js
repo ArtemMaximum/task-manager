@@ -46,7 +46,7 @@ export const RootTemplate = ({ children, version = '0.0.0' }) => (
     <Footer>
       <PoweredBy/>
       <Copyright/>
-      <Version version={version}/>
+      <Version version={version} />
     </Footer>
   </RootWrapper>
 )

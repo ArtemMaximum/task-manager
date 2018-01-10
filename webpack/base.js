@@ -7,24 +7,24 @@ const Package = require('../package.json')
 // const publicPath = resolve(__dirname, '..', 'static')
 
 module.exports = {
-  name: 'uber.copy',
+  name: 'task-manager',
   context: resolve(__dirname, '..', 'src'),
   target: 'web',
-
+  
   entry: {
     index: [],
     polyfill: [
       'babel-polyfill',
     ],
   },
-
+  
   output: {
     path: resolve(__dirname, '..', 'dist'),
     filename: 'js/[name]-[hash].js',
     publicPath: '/',
     pathinfo: false,
   },
-
+  
   resolve: {
     extensions: ['.jsx', '.js'],
     modules: [
@@ -33,7 +33,7 @@ module.exports = {
       'node_modules',
     ],
   },
-
+  
   module: {
     rules: [
       {
@@ -55,7 +55,7 @@ module.exports = {
       },
     ],
   },
-
+  
   plugins: [
     new HtmlPlugin({
       template: resolve(__dirname, '..', 'src', 'index.html'),

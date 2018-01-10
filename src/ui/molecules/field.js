@@ -20,30 +20,30 @@ const Wrapper = styled.div`
 `
 
 export const Field = ({ error, name, invalid, label, type, ...props }) => {
-    const inputProps = { id: name, name, type, invalid, 'aria-describedby': `${name}Error`, ...props }
-    const renderInputFirst = type === 'checkbox' || type === 'radio'
-    return (
-        <Wrapper>
-            {renderInputFirst && <Input {...inputProps} />}
-            {label && <Label htmlFor={inputProps.id}>{label}</Label>}
-            {renderInputFirst || <Input {...inputProps} />}
-            {invalid && error &&
-            <Error id={`${name}Error`} role="alert" palette="danger" transparent>
-                {error}
-            </Error>
-            }
-        </Wrapper>
-    )
+  const inputProps = { id: name, name, type, invalid, 'aria-describedby': `${name}Error`, ...props }
+  const renderInputFirst = type === 'checkbox' || type === 'radio'
+  return (
+    <Wrapper>
+      {renderInputFirst && <Input {...inputProps} />}
+      {label && <Label htmlFor={inputProps.id}>{label}</Label>}
+      {renderInputFirst || <Input {...inputProps} />}
+      {invalid && error &&
+      <Error id={`${name}Error`} role="alert" palette="danger" transparent>
+        {error}
+      </Error>
+      }
+    </Wrapper>
+  )
 }
 
 Field.propTypes = {
-    name: PropTypes.string.isRequired,
-    invalid: PropTypes.bool,
-    error: PropTypes.string,
-    label: PropTypes.string,
-    type: PropTypes.string
+  name: PropTypes.string.isRequired,
+  invalid: PropTypes.bool,
+  error: PropTypes.string,
+  label: PropTypes.string,
+  type: PropTypes.string
 }
 
 Field.defaultProps = {
-    type: 'text'
+  type: 'text'
 }

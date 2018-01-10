@@ -13,6 +13,7 @@
     "jsx-a11y/anchor-is-valid": "off",
     "object-curly-newline": "off",
     "object-curly-spacing": "off",
-    "function-paren-newline": "off"
+    "function-paren-newline": "off",
+    "linebreak-style": 0
   }
 }

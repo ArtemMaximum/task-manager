@@ -13,10 +13,10 @@ const store = configureStore();
 export default () => (
   <RootTemplate>
     <Provider store={store}>
-        <Switch>
-          <Route exact path="/" component={HomePage} />
-          <Route component={NotFoundPage} />
-        </Switch>
+      <Switch>
+        <Route exact path="/" component={HomePage}/>
+        <Route component={NotFoundPage}/>
+      </Switch>
     </Provider>
   </RootTemplate>
 )

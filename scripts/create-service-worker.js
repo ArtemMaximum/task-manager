@@ -21,7 +21,7 @@ console.log(b('\n\n', '[[ SERVICE WORKER GENERATOR ]]'), '\n\n')
 
 const templateSource = readFileSync(SOURCE_FILE).toString()
 
-const cacheName = `uber.copy-${version}`
+const cacheName = `task-manager-${version}`
 const assetsList = ['index', 'polyfill']
   .map(name => [assets[name].js, assets[name].css].filter(e => !!e))
   .reduce((all, curr) => all.concat(curr))

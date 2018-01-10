@@ -5,24 +5,24 @@ import { createLogger } from 'redux-logger'
 import appReducers from './reducers';
 // import redirect from '../middleware/redirect';
 
-const middleware = process.env.NODE_ENV === 'production' ? [thunk] : [thunk, createLogger({collapsed: true})];
+const middleware = process.env.NODE_ENV === 'production' ? [thunk] : [thunk, createLogger({ collapsed: true })];
 
 export default function configureStore(initialState = {}) {
-    const store = createStore(
-        appReducers,
-        initialState,
-        applyMiddleware(...middleware)
-    );
-
-    if (module.hot) {
-        // Enable Webpack hot module replacement for reducers
-        module.hot.accept('./reducers', () => {
-            const nextRootReducer = require('./reducers');
-
-            console.log('\n ... replaceReducer ...');
-            store.replaceReducer(nextRootReducer);
-        });
-    }
-
-    return store;
+  const store = createStore(
+    appReducers,
+    initialState,
+    applyMiddleware(...middleware)
+  );
+  
+  if (module.hot) {
+    // Enable Webpack hot module replacement for reducers
+    module.hot.accept('./reducers', () => {
+      const nextRootReducer = require('./reducers');
+      
+      console.log('\n ... replaceReducer ...');
+      store.replaceReducer(nextRootReducer);
+    });
+  }
+  
+  return store;
 }

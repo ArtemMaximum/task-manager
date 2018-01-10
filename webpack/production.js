@@ -20,8 +20,7 @@ module.exports = webpackMerge(commonConfig, {
     ],
   },
   module: {
-    rules: [
-    ],
+    rules: [],
   },
   plugins: [
     new LoaderOptionsPlugin({

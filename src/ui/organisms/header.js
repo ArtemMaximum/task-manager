@@ -68,19 +68,19 @@ const BackgroundImage = styled.div`
 `
 
 export const Header = ({
-  profile,
-  backgroundImage,
-  navigationItems,
-}) => (
+                         profile,
+                         backgroundImage,
+                         navigationItems,
+                       }) => (
   <HeaderOrganism>
     <HeaderWrapper>
-        <ExpandedContent>
-            {/*<PersonalCard profile={profile} />
+      <ExpandedContent>
+        {/*<PersonalCard profile={profile} />
             <ArrowLine><IconArrow /></ArrowLine>*/}
       </ExpandedContent>
-      <NavigationPanel items={navigationItems} />
+      <NavigationPanel items={navigationItems}/>
     </HeaderWrapper>
-      {/*<BackgroundImage style={{ backgroundImage: `url(${backgroundImage})` }} />*/}
+    {/*<BackgroundImage style={{ backgroundImage: `url(${backgroundImage})` }} />*/}
   </HeaderOrganism>
 )
 

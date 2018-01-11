@@ -3,7 +3,10 @@ import styled from 'styled-components'
 import { themeOr, ifProp } from 'lib/theme'
 
 export const Block = styled.div`
-  font-family: ${themeOr('font', 'primary')};
+  font-size: 15px;
+  background: #ff868680;
+  border-bottom: 2px solid #cc0000;
+  padding: 20px;
 `
 
 Block.propTypes = {
